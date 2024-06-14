@@ -30,13 +30,17 @@ dependencies {
 #### SampleScreen.kt
 ```kotlin 
 
+@Composable
+@Preview(name = "Light Mode", showBackground = true)
 @Preview(name = "Dark Mode", uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 fun PreviewSampleScreen() {
     val analytics = mockPreview<Analytics>()
     val dataSource = mockPreview<DataSource> {
-        forThis { title } returns "JohDoe"
+        forThis { title } returns "Mr. John Doe"
         forThis { address } returns "Menlo Park California"
     }
+    mockPreviewObject(SampleInput)
+    forThis { SampleInput.input } returns "94025"
     val sampleScreen = SampleScreen(analytics, dataSource)
     MockPreviewTheme {
         sampleScreen.Render()
