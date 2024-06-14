@@ -48,5 +48,5 @@ fun PreviewSampleScreen() {
 }
 
 ```
-#### SampleOutput.kt
+#### SamplePreview
 ![sample-demo.png](sample-demo.png "Compose preview")
