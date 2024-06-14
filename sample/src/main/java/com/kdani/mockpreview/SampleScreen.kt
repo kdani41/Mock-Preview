@@ -38,7 +38,7 @@ class SampleScreen(
 fun PreviewSampleScreen() {
     val analytics = mockPreview<Analytics>()
     val dataSource = mockPreview<DataSource> {
-        forThis { title } returns "JohDoe"
+        forThis { title } returns "Mr. John Doe"
         forThis { address } returns "Menlo Park California"
     }
     val sampleScreen = SampleScreen(analytics, dataSource)

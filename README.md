@@ -3,6 +3,7 @@
 
 ### Description
 Light weight library based of [mockk](https://mockk.io/) for supporting mocks in [compose preview](https://developer.android.com/develop/ui/compose/tooling/previews).
+
 Special thanks to contributors at [mockk](https://mockk.io/)
 
 ### Features
@@ -36,4 +37,5 @@ fun PreviewSampleScreen() {
 }
 
 ```
+#### SampleOutput.kt
 ![sample-demo.png](sample-demo.png "Compose preview")
