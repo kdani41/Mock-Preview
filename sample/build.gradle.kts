@@ -4,30 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.kdani.mockpreview"
-    compileSdk = 34
-
+    namespace = libs.versions.namespace.get()
+    compileSdk = libs.versions.compileSDK.get().toInt()
     defaultConfig {
-        applicationId = "com.kdani.mockpreview"
-        minSdk = 24
-        targetSdk = 34
+        minSdk = libs.versions.minSDK.get().toInt()
+        targetSdk = libs.versions.minSDK.get().toInt()
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
