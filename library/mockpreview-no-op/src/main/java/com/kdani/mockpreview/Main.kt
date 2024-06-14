@@ -14,6 +14,11 @@ inline fun <reified T : Any> mockPreview(
     crossinline block: T.() -> Unit = {}
 ): T = Any() as T
 
+/**
+ * Returns a no-op operation for mocks.
+ * mocks are not supported for release.
+ */
+fun mockPreviewObject(vararg objects: Any) = Any()
 
 /**
  * Returns a no-op operation for mocks.

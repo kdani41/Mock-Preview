@@ -28,6 +28,7 @@ class SampleScreen(
         ) {
             Text(text = dataSource.title, color = MaterialTheme.colorScheme.onPrimaryContainer)
             Text(text = dataSource.address, color = MaterialTheme.colorScheme.onSecondaryContainer)
+            Text(text = SampleInput.input, color = MaterialTheme.colorScheme.onSecondaryContainer)
         }
     }
 }
@@ -41,6 +42,8 @@ fun PreviewSampleScreen() {
         forThis { title } returns "Mr. John Doe"
         forThis { address } returns "Menlo Park California"
     }
+    mockPreviewObject(SampleInput)
+    forThis { SampleInput.input } returns "94025"
     val sampleScreen = SampleScreen(analytics, dataSource)
     MockPreviewTheme {
         sampleScreen.Render()

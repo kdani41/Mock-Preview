@@ -1,6 +1,7 @@
 package com.kdani.mockpreview
 
 import com.kdani.mockpreview.gateway.MockPreviewGateway
+import com.kdani.mockpreview.helpers.internalMockkObject
 import io.mockk.MockKMatcherScope
 import kotlin.reflect.KClass
 
@@ -30,6 +31,14 @@ inline fun <reified T : Any> mockPreview(
     block(mock)
     mock
 }
+
+/**
+ * Allows mocking object class for previews.
+ */
+fun mockPreviewObject(vararg objects: Any) =
+    MockPreviewGateway.useImpl {
+        it.objectMockFactory.internalMockkObject(objects, recordPrivateCalls = false)
+    }
 
 /**
  * Starts a block of stubbing. Part of DSL.

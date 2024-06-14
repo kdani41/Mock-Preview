@@ -9,6 +9,13 @@ Special thanks to contributors at [mockk](https://mockk.io/)
 ### Features
 - Allows to mock objects for compose previews.
 
+### Operators Map
+|      Mock Preview	       |    Mockk    |        Description	         |
+|:------------------------:|:-----------:|:---------------------------:|
+|       mockPreview        |    mockk    | for mocking regular classes |
+|    mockPreviewObject     | mockkObject | for mocking object classes  |
+|         forThis          |    every    |  for returning stub values  |
+
 ### Installation
 ```kotlin 
 

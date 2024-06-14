@@ -5,3 +5,7 @@ interface DataSource {
 
     val address: String
 }
+
+object SampleInput {
+    val input: String = ""
+}
